@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Structural Engineering Design System */
+/* Colors: Dark Red (#8B0000), Matte Black (#0E0E0E), White (#FFFFFF) */
+
+@layer base {
+  :root {
+    /* Architectural Color Palette */
+    --background: 0 0% 5.5%;
+    /* Matte Black #0E0E0E */
+    --foreground: 0 0% 100%;
+    /* Pure White */
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 5.5%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Dark Red - Structural Steel Elegance */
+    --primary: 0 100% 27.3%;
+    /* Dark Red #8B0000 */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 100% 35%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 77%;
+    /* #C4C4C4 */
+
+    --accent: 0 100% 27.3%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 100% 27.3%;
+
+    --radius: 0rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 100% 27.3%) 0%, hsl(0 100% 35%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 5.5% / 0%) 0%, hsl(0 0% 5.5% / 0.8) 100%);
+    --gradient-red-glow: linear-gradient(90deg,
+        hsl(0 100% 27.3% / 0%) 0%,
+        hsl(0 100% 27.3% / 0.3) 50%,
+        hsl(0 100% 27.3% / 0%) 100%);
+
+    /* Shadows */
+    --shadow-red: 0 10px 40px -10px hsl(0 100% 27.3% / 0.4);
+    --shadow-elevation: 0 20px 60px -20px hsl(0 0% 0% / 0.6);
+
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elastic: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    font-feature-settings: "cv11", "ss01";
+    font-optical-sizing: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-poppins font-bold;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl lg:text-8xl tracking-tight leading-none;
+  }
+
+  h2 {
+    @apply text-3xl md:text-5xl lg:text-6xl tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+}
+
+@layer utilities {
+
+  /* Text Gradients */
+  .text-gradient-red {
+    @apply bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent;
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-red;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-red;
+  }
+
+  /* Architectural Line Accents */
+  .line-accent {
+    @apply relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-12 before:h-0.5 before:bg-primary;
+  }
+
+  .line-accent-bottom {
+    @apply relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-12 after:h-0.5 after:bg-primary;
+  }
+
+  /* Grid Patterns */
+  .grid-pattern {
+    background-image: linear-gradient(hsl(0 0% 100% / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 100% / 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Overlay Effects */
+  .overlay-gradient {
+    @apply relative before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-t before:from-background before:via-background/50 before:to-transparent;
+  }
+
+  /* Asymmetric Containers */
+  .container-fluid {
+    @apply w-full px-6 md:px-12 lg:px-20;
+  }
+
+  .container-asymmetric {
+    @apply w-full pl-6 pr-12 md:pl-12 md:pr-24 lg:pl-20 lg:pr-32;
+  }
+
+  /* Print Styles for Project Details and Services */
+  @media print {
+
+    /* Hide non-essential elements */
+    header,
+    footer,
+    nav,
+    .no-print,
+    button,
+    .sticky-contact-button {
+      display: none !important;
+    }
+
+    /* Page setup */
+    @page {
+      margin: 2cm;
+      size: A4;
+    }
+
+    body {
+      background: white;
+      color: black;
+      font-size: 12pt;
+      line-height: 1.5;
+    }
+
+    /* Print-friendly colors */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: black;
+      page-break-after: avoid;
+      page-break-inside: avoid;
+    }
+
+    p,
+    ul,
+    ol {
+      page-break-inside: avoid;
+      orphans: 3;
+      widows: 3;
+    }
+
+    img {
+      max-width: 100%;
+      page-break-inside: avoid;
+    }
+
+    a {
+      color: black;
+      text-decoration: underline;
+    }
+
+    a[href]:after {
+      content: " (" attr(href) ")";
+      font-size: 0.8em;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .print-page-break {
+      page-break-after: always;
+    }
+
+    .print-section {
+      page-break-inside: avoid;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
