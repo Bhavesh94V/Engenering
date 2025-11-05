@@ -11,7 +11,7 @@ import { pageSEO } from "@/lib/seo"
 import { useProjectsAPI } from "@/hooks/useProjectsAPI"
 import heroStructure3 from "@/assets/hero-structure-3.jpg"
 
-const categories = ["All", "Commercial", "Industrial", "Infrastructure", "Residential"]
+const categories = ["All", "Commercial", "Industrial", "Infrastructure", "Residential", "Spiritual"]
 const locations = ["All", "California", "New York", "Texas", "Other"]
 const years = ["All", "2024", "2023", "2022"]
 const ITEMS_PER_PAGE = 12

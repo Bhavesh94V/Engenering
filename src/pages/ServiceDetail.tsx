@@ -145,9 +145,9 @@ const ServiceDetail = () => {
       <section className="py-24 md:py-32 container-fluid">
         <div className="max-w-6xl mx-auto">
           <img
-            src={heroStructure2}
+            src={service.image}
             alt={service.title}
-            className="w-full h-auto"
+            className="w-full max-h-[800px]"
           />
         </div>
       </section>

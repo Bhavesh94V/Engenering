@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 const projectSchema = new mongoose.Schema({
   title: { type: String, required: true },
-  category: { type: String, required: true, enum: ["Commercial", "Industrial", "Infrastructure", "Residential"] },
+  category: { type: String, required: true, enum: ["Commercial", "Industrial", "Infrastructure", "Residential", "Spiritual"] },
   location: { type: String, required: true },
   year: { type: String, required: true },
   imagePath: { type: String, required: true },

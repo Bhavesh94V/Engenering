@@ -1,4 +1,4 @@
-import { Building2, Factory, Construction, Home, Warehouse, Zap } from "lucide-react";
+import { Building2, Factory, Construction, Home, Warehouse, Zap, Wind, Flame } from "lucide-react";
 import projectCommercial from "@/assets/project-commercial-1.jpg";
 import projectIndustrial from "@/assets/project-industrial-1.jpg";
 
@@ -151,6 +151,56 @@ export const services = [
       { label: "Seismic Projects", value: "120+" },
       { label: "Buildings Retrofitted", value: "85+" },
       { label: "Lives Protected", value: "100,000+" },
+    ],
+  },
+  {
+    id: "hvac-systems",
+    icon: Wind,
+    title: "HVAC System Design",
+    tagline: "Efficient climate control for optimal comfort",
+    description: "Advanced heating, ventilation, and air conditioning systems engineered for energy efficiency and occupant comfort.",
+    fullDescription: "Our HVAC engineering services provide comprehensive mechanical system design for buildings of all types and sizes. We specialize in creating energy-efficient climate control solutions that maximize comfort while minimizing operational costs. From initial load calculations through system commissioning, our team delivers integrated HVAC solutions that meet stringent energy codes and sustainability requirements.",
+    features: ["Load calculations", "Energy modeling", "System design", "Commissioning support"],
+    capabilities: [
+      "HVAC load calculations and equipment sizing",
+      "Energy modeling and optimization",
+      "Variable air volume (VAV) systems",
+      "Chilled water and hot water systems",
+      "Dedicated outdoor air systems (DOAS)",
+      "Building automation and controls integration",
+      "Indoor air quality analysis",
+      "LEED and green building compliance",
+    ],
+    image: projectCommercial,
+    stats: [
+      { label: "HVAC Projects", value: "180+" },
+      { label: "Energy Savings", value: "35%" },
+      { label: "Buildings Designed", value: "250+" },
+    ],
+  },
+  {
+    id: "fire-protection",
+    icon: Flame,
+    title: "Fire Protection Engineering",
+    tagline: "Life safety through advanced fire protection systems",
+    description: "Comprehensive fire protection design including sprinkler systems, fire alarm, and smoke control for all building types.",
+    fullDescription: "Fire protection engineering is critical to building safety and code compliance. Our team provides complete fire protection design services including automatic sprinkler systems, fire alarm and detection systems, smoke control, and egress analysis. We work closely with architects and building officials to ensure all fire and life safety requirements are met while optimizing system costs and maintaining architectural aesthetics.",
+    features: ["Sprinkler design", "Fire alarm systems", "Smoke control", "Code compliance"],
+    capabilities: [
+      "Automatic sprinkler system design (wet, dry, preaction)",
+      "Fire alarm and mass notification systems",
+      "Smoke control and management systems",
+      "Fire pump sizing and specifications",
+      "Fire suppression systems (clean agent, foam)",
+      "Egress analysis and life safety planning",
+      "Performance-based fire engineering",
+      "Fire protection system commissioning",
+    ],
+    image: projectIndustrial,
+    stats: [
+      { label: "Fire Systems Designed", value: "220+" },
+      { label: "Buildings Protected", value: "300+" },
+      { label: "Code Compliance Rate", value: "100%" },
     ],
   },
 ];

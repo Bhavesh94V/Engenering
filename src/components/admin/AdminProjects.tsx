@@ -205,6 +205,7 @@ const AdminProjects = () => {
                   <option value='Industrial'>Industrial</option>
                   <option value='Infrastructure'>Infrastructure</option>
                   <option value='Residential'>Residential</option>
+                  <option value='Spiritual'>Spiritual</option>
                 </select>
               </div>
 
